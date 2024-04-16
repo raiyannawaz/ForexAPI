@@ -569,7 +569,7 @@ form button{
     /* Forex Check  */
     /* CONTAINER  */
     /* footer  */
-    footer{
+    .container footer{
         display: none;
     }
     /* footer  */
