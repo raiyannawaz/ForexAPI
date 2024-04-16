@@ -379,7 +379,7 @@ form button{
     /* CONTAINER  */
     .container{
         height: unset;
-        min-height: 100svh;
+        min-height: 100dvh;
     }
     
     /* Navbar  */
@@ -448,8 +448,8 @@ form button{
     }
     /* Navbar  */
     .container .content{
-        height: calc(100vh - 135px);
-        min-height: calc(100vh - 135px);
+        height: calc(100dvh - 135px);
+        min-height: calc(100dvh - 135px);
     }
 
     /* Top Currencies  */
