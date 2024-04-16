@@ -379,8 +379,7 @@ form button{
     /* CONTAINER  */
     .container{
         height: unset;
-        min-height: 100vh;
-        position: relative;
+        min-height: 100svh;
     }
     
     /* Navbar  */
@@ -388,8 +387,6 @@ form button{
         min-height: 75px;
         height: auto;
         transition: 0.3s all ease;
-        position: absolute;
-        top: 0;
     }
     .navbar .container-fluid{
         height: 100%;
@@ -453,10 +450,6 @@ form button{
     .container .content{
         height: calc(100vh - 135px);
         min-height: calc(100vh - 135px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
     /* Top Currencies  */
@@ -575,10 +568,6 @@ form button{
     /* Forex Check  */
     /* CONTAINER  */
     /* footer  */
-    .container footer{
-        position: absolute;
-        bottom: 0;
-    }
     /* footer  */
 }
 
