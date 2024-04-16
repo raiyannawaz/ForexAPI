@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title><%=title%></title>
+</head>
+
+<body>
+    <div class="container">
+        <%-include('../partials/navbar.ejs')%>
+        <div class="content">
+            <div class="top-currency">
+                <div class="top-currency-left">
+                    <img src="/img/currencies.png" alt="">
+                </div>
+                <div class="top-currency-right">
+                    <div class="headings">
+                        <div class="heading-first">
+                            <h2>Country</h2>
+                        </div>
+                        <div class="heading-rest">
+                            <h2>Code</h2>
+                            <h2>Rates</h2>
+                            <h2>Last Update</h2>
+                            <h2>Next Update</h2>
+                        </div>
+                    </div>
+                   <div class="boxes">
+                    <%currencyValues.forEach((currencyValue)=>{%>
+                        <div class="box">
+                            <div class="img-content">
+                                <% if (currencyValue.base==='USD') { %>
+                                    <img src="/img/flags/USD.jpg">
+                                  <% } %>
+                                <% if (currencyValue.base==='EUR') { %>
+                                    <img src="/img/flags/EUR.jpg">
+                                <% } %>
+                                <% if (currencyValue.base==='GBP') { %>
+                                    <img src="/img/flags/GBP.jpg">
+                                  <% } %>
+                                <% if (currencyValue.base==='CAD') { %>
+                                    <img src="/img/flags/CAD.jpg">
+                                <% } %>
+                                <% if (currencyValue.base==='AUD') { %>
+                                    <img src="/img/flags/AUD.jpg">
+                                <% } %>
+                            </div>
+                            <div class="item-info">
+                                <h4><%=currencyValue.base%></h4>
+                                <h4><%=currencyValue.INR%></h4>
+                                <h4><%=currencyValue.lastUpdate.slice(0,12)%></h4>
+                                <h4><%=currencyValue.nextUpdate.slice(0,12)%></h4>
+                            </div>
+                        </div>
+                    <%})%>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <%-include('../partials/footer.ejs')%>
+    </div>
+</body>
+<%-include('../partials/script.ejs')%>
+</html>

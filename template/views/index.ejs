@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+    <div class="container">
+        <%-include('../partials/navbar.ejs')%>
+        <div class="content">
+            <div class="dashboard">
+                <div class="left-dashboard">
+                    <h1>My Forex App</h1>
+                    <p>This application allows users to get access to real-time foreign exchange rates of the markets across the globe with their values and this is built using  <a href="https://www.exchangerate-api.com/" target="_blank">ExchangeRate-API</a></p>
+                    <div class="button-group">
+                        <a href="/topCurrencies">Top Currencies</a>
+                    <a href="/forexCheck">Check Forex</a>
+                    </div>
+                </div>
+                <div class="right-dashboard">
+                    <img src="/img/displayImg.png" alt="">
+                </div>
+            </div>
+        </div>
+        <%-include('../partials/footer.ejs')%>
+    </div>
+</body>
+<%-include('../partials/script.ejs')%>
+</html>

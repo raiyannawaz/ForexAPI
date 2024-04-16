@@ -1,0 +1,25 @@
+{
+  "name": "4.-forex-app",
+  "version": "1.0.0",
+  "description": "Special One",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raiyan_Nawaz",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raiyannawaz/ForexAPI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raiyannawaz/ForexAPI/issues"
+  },
+  "homepage": "https://github.com/raiyannawaz/ForexAPI#readme"
+}

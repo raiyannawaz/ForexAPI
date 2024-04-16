@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Jost&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+:root{
+    --bg-color-1: rgba(240, 248, 255, 0.158);
+    --bg-color-2: rgba(240, 248, 255, 0.089);
+    --bg-color-3: rgba(200, 213, 219, 0.589);
+}
+
+/* CONTAINER  */
+.container{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.container::before{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/bg.jpg') center/cover ;
+    z-index: -1;
+}
+
+/* NAVBAR  */
+.container .navbar{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color-1);
+    color: white;
+}
+
+.navbar .container-fluid{
+    height: 100%;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-fluid .left-nav{
+    align-content: center;
+}
+
+.left-nav button{
+    display: none;
+}
+
+.container-fluid .right-nav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-nav .nav-ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-ul li{
+    list-style: none;
+}
+
+li a.active{
+    color: white;
+}
+
+.nav-ul li:nth-child(2){
+    padding: 0 30px;
+}
+
+li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--bg-color-1);
+}
+/* NAVBAR  */
+
+/* CONTENT  */
+.container .content{
+    height: calc(100vh - 130px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Top Currency  */
+.content .top-currency{
+    height: 85%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-currency .top-currency-left{
+    height: 100%;
+    width: 35%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top-currency .top-currency-left img{
+    height: 80%;
+    width: 85%;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,0.25)) invert(100%);
+}
+
+.top-currency .top-currency-right{
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-currency-right .headings{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    padding-top: 1.25rem;
+    color: white;
+}
+
+.headings .heading-first{
+    width: 100px;
+    text-align: center;
+}
+
+.heading-first h2{
+    font-size: 1.25rem;
+}
+
+.headings .heading-rest{
+    width: calc(100% - 100px);
+    display: flex;
+}
+
+.heading-rest h2{
+    width: 25%;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.top-currency-right .boxes{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.boxes .box{
+    height: calc(70%/5);
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color-3);
+}
+.box .img-content{
+    width: 100px;
+    height: 100%;
+}
+
+.img-content img{
+    height: 100%;
+    width: 100%;
+}
+
+.box .item-info{
+    height: 100%;
+    width: calc(100% - 100px);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.item-info h4{
+    width: 25%;
+    text-align: center;
+}
+/* Top Currency  */
+
+/* DASHBOARD  */
+
+.content .dashboard{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.dashboard .left-dashboard{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.left-dashboard p{
+    margin: 0.75rem 0;
+    line-height: 1.5;
+}
+
+.left-dashboard .button-group{
+    display: flex;
+    align-items: center;
+}
+
+.button-group a{
+    height: 40px;
+    width: auto;
+    padding: 0 1.25rem;
+    border: 1px solid white;
+    border-radius: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s all ease;
+}
+
+.button-group a:nth-child(1){
+    background-color: white;
+    color: black;
+    margin-right: 0.5rem;
+}
+.button-group a:nth-child(1):hover{
+    background: none;
+    color: white;
+}
+
+.button-group a:nth-child(2){
+    color: white;
+}
+
+.button-group a:nth-child(2):hover{
+    background-color: white;
+    color: black;
+}
+
+.dashboard .right-dashboard{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.right-dashboard img{
+    height: 70%;
+}
+
+/* DASHBOARD  */
+
+/* Forex Check  */
+.content .forex-check{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.forex-check form{
+    text-align: center;
+}
+
+form .convertFrom,
+form .convertTo{
+    height: 60px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.convertFrom input,
+.convertTo textarea,
+.convertFrom select,
+.convertTo select{
+    border: none;
+    outline: none;
+    background: var(--bg-color-3);
+    color: white;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.convertFrom input:active,
+.convertTo textarea:active,
+.convertFrom select:active,
+.convertTo select:active,
+
+.convertFrom input:focus,
+.convertTo textarea:focus,
+.convertFrom select:focus,
+.convertTo select:focus{
+    background: var(--bg-color-3);
+}
+
+.convertFrom select,
+.convertTo select{
+    width: 58%;
+    cursor: pointer;
+}
+
+::-webkit-outer-spin-button,
+::-webkit-inner-spin-button{
+    display: none;
+}
+
+input[type="number"]{
+    appearance: none;
+}
+
+.convertFrom input,
+.convertTo textarea{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.convertTo textarea{
+    line-height: 3;
+    resize: none;
+}
+
+form button{
+    height: 45px;
+    width: 100px;
+    background-color: rgb(191, 191, 219);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* Forex Check  */
+
+/* CONTENT  */
+
+/* Footer */
+.container footer{
+    height: 60px;
+    width: 100%;
+    color: white;
+    background-color: var(--bg-color-2);
+    display: grid;
+    place-content: center;
+}
+/* Footer */
+/* CONTAINER  */
+
+
+/* MOBILE  */
+@media only screen and (max-width: 450px) {
+    /* CONTAINER  */
+    .container{
+        height: unset;
+        min-height: 99vh;
+    }
+    
+    /* Navbar  */
+    .container .navbar{
+        min-height: 75px;
+        height: auto;
+        transition: 0.3s all ease;
+    }
+    .navbar .container-fluid{
+        height: 100%;
+        width: 90%;
+        flex-direction: column;
+    }
+    .container-fluid .left-nav{
+        height: 75px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-nav button{
+        display: block;
+        height: auto;
+        width: auto;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 2.25rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    .container-fluid .right-nav{
+        height: 0;
+        overflow: hidden;
+        width: 100%;
+        transition: 0.3s all ease;
+    }
+
+    .right-nav li{
+        width: 100%;
+    }
+
+    .right-nav.show-right-nav{
+        height: 150px;
+        overflow: visible;
+        transition: 0.3s all ease;
+    }
+
+    .right-nav .nav-ul{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+    }
+
+    .right-nav.right-nav.show-right-nav li{
+        height: calc(100%/3);
+        align-content: center;
+    }
+
+    .nav-ul li:nth-child(2){
+        padding: 0;
+    }
+    /* Navbar  */
+    .container .content{
+        height: calc(100vh - 135px);
+        min-height: calc(100vh - 135px);
+    }
+
+    /* Top Currencies  */
+
+    .content .top-currency{
+        height: 90%;
+    }
+    .top-currency .top-currency-left{
+        display: none;
+    }
+
+    .top-currency .top-currency-right{
+        width: 100%;
+        height: 80%;
+    }
+
+    .top-currency-right .headings{
+        padding-top: 1rem;
+        height: 15%;
+    }
+
+    .top-currency-right .boxes{
+        height: 85%;
+    }
+
+    .heading-first h2 {
+        width: 100% !important;
+    }
+
+    .heading-first h2, .heading-rest h2,
+    .item-info h4{
+        font-size: 1rem;
+    }
+
+    
+    .heading-first h2, .heading-rest h2,
+    .item-info h4{
+        width: 24%;
+    }
+
+    .heading-first h2, .heading-rest h2:first-child,
+    .item-info h4:first-child{
+        width: 22%;
+    }
+
+    .boxes .box{
+        height: calc(60% / 5);
+    }
+
+    .headings .heading-first, 
+    .box .img-content{
+        width: 70px;
+    }
+
+    .headings .heading-rest, 
+    .box .item-info{
+        width: calc(100% - 70px);
+    }
+    /* Top Currencies  */
+    /* Dashboard  */
+    .content .dashboard{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+    }
+
+    .dashboard .left-dashboard{
+        width: 100%;
+        height: 50%;
+    }
+
+    .dashboard .right-dashboard{
+        height: 50%;
+        width: 100%;
+        justify-content: center;
+    }
+    .right-dashboard img{
+        height: 75%;
+        width: 100%;
+    }
+    /* Dashboard  */
+    /* Forex Check  */
+    .content .forex-check{
+        width: 90%;
+    }
+
+    .forex-check form{
+        width: 100%;
+    }
+
+    form .convertFrom, 
+    form .convertTo{
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .convertFrom select,
+    .convertFrom input,
+    .convertTo select, 
+    .convertTo textarea{
+        height: 60px;
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+    select:active{
+        background-color: red;
+        width: 100%;
+        overflow: hidden;
+    }
+    select option{
+        width: 100%;
+    }
+    /* Forex Check  */
+    /* CONTAINER  */
+    /* footer  */
+    /* footer  */
+}
+
+
+@media only screen and (max-width: 375px) {
+    .top-currency .top-currency-right {
+        width: 100%;
+        height: 90%;
+    }
+    
+    .heading-first h2, .heading-rest h2{
+        font-size: 0.9rem;
+    }
+    .item-info h4{
+        font-size: 0.75rem;
+    }
+}
+/* MOBILE  */

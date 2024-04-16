@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('../partials/head')%>
+<body>
+    <div class="container">
+        <%-include('../partials/navbar')%>
+    <div class="content">
+        <div class="forex-check">
+            <form method="post">
+                <div class="convertFrom">
+                    <select name="fromCurrency" id="currencyList">
+                        <%currencyList.forEach((currency)=>{%>
+                            <%defaultCurrency.forEach((defCur)=>{%>
+                                 <% if(currency.code === defCur.fromCurrency){%>
+                                     <option selected value=<%=currency.code%>><%=currency.name%></option>
+                                 <%} %>
+                                 <% if (currency.code !== defCur.fromCurrency){%>
+                                     <option value=<%=currency.code%>><%=currency.name%></option>
+                                 <%}
+                                 %>
+                             <%})%>
+                         <%})%>
+                    </select>
+                    <input type="number" name="fromValue" value=<%=fromValue%>>
+                </div>
+                <div class="convertTo">
+                    <select name="toCurrency" id="currencyList">
+                        <%currencyList.forEach((currency)=>{%>
+                           <%defaultCurrency.forEach((defCur)=>{%>
+                                <% if(currency.code === defCur.toCurrency){%>
+                                    <option selected value=<%=currency.code%>><%=currency.name%></option>
+                                <%} %>
+                                <% if (currency.code !== defCur.toCurrency){%>
+                                    <option value=<%=currency.code%>><%=currency.name%></option>
+                                <%}
+                                %>
+                            <%})%>
+                        <%})%>
+                    </select>
+                    <textarea type="text" name="toValue" disabled><%=toValue%></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <%-include('../partials/footer')%>
+    </div>
+</body>
+<%-include('../partials/script')%>
+</html>
