@@ -379,7 +379,8 @@ form button{
     /* CONTAINER  */
     .container{
         height: unset;
-        min-height: 99vh;
+        min-height: 100vh;
+        position: relative;
     }
     
     /* Navbar  */
@@ -568,6 +569,10 @@ form button{
     /* Forex Check  */
     /* CONTAINER  */
     /* footer  */
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
     /* footer  */
 }
 
